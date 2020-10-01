@@ -1,0 +1,182 @@
+/* スマホ向けレイアウト */
+@media all and (max-width: 900px) {
+	
+	.nav-container a {
+	display: none;
+}
+
+.container {
+	width: 85%;
+}
+
+header {
+	height: 73px;
+}
+
+.nav-container {
+	width: 85%;
+}
+
+.hedder-logo {
+	height: 19px;
+	margin: 28px 0 26px 0;
+}
+
+.nav-container li:nth-child(2),
+.nav-container li:nth-child(3),
+.nav-container li:nth-child(4),
+.nav-container li:nth-child(5) {
+	display: none;
+}
+
+.header-photo {
+	display: none;
+}
+
+
+h2 {
+	position: absolute;
+	
+	font-size: 20px;
+	letter-spacing: 0.6em;
+	text-indent: 0.6em;
+	font-weight: normal;
+	text-align: center;
+	color: white;
+	text-shadow: 0px 0px 20px #73aed1;
+	
+	width: 100%;
+	left: 0; 
+	top: calc(50% - 15px);
+}
+
+.header-photo-s {
+	position: relative;
+	display: block;
+}
+
+.header-photo-s img {
+	width: 100%;
+}
+
+.main {
+	margin: 35px 0 50px 0;
+}
+
+
+/* ハンバーガーメニュー用 */
+/*メニューリンクのスタイルを指定*/
+.ham-menu {
+	display: table; /*テーブル要素に変更（上下中央揃え用親要素）*/
+	text-align: center;
+	
+	z-index: 2;
+	
+	position: absolute; /* fixedから変更 */
+	top: 0; /*表示位置を指定*/
+	left: 0; /*表示位置を指定*/
+	
+	background-color: #f0f8ff;
+	
+	font-size: 17px;
+	letter-spacing: 0.3em;
+	text-indent: 0.3em; /* レタースペーシング分のズレ解消 */
+	font-weight: normal;
+	line-height: 4em;
+	
+	height: 100%; /*全画面表示のため挿入*/
+	width: 100%; /*全幅表示*/
+	
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .6s ease, visibility .6s ease; /*アニメーションの時間を指定*/
+}
+
+.ham-menu ul {
+	display: table-cell; /*テーブルセル要素に変更（上下中央揃え用子要素）*/
+	vertical-align: middle; /*上下中央*/
+}
+
+.ham-menu ul li{
+	list-style-type: none;
+}
+
+.ham-menu ul li a{
+	color: #00aacc;
+}
+
+/*ハンバーガーボタンが押されたときに付与するクラス*/
+.ham-menu.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*ハンバーガーボタンのスタイルを指定*/
+.hum-icon {
+	display: block;
+	position: absolute; /* fixedから変更 */
+	right: 0px;
+	top: 0px;
+	width: calc(30px + 15%); /* span幅+ヘッダーの左右マージンx2 */
+	height: 73px;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.hum-icon span {
+	display: block;
+	position: absolute;
+	width: 30px;
+	border-bottom: solid 3px #5cb8e6;
+	-webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
+	-moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
+	transition: .35s ease-in-out;			/*変化の速度を指定*/
+	right: calc(50% - 15px); /* hum-iconの真ん中の位置-span幅の半分 */
+}
+
+.hum-icon span:nth-child(1) {
+	top: 25px;
+}
+
+.hum-icon span:nth-child(2) {
+	top: 35px;
+}
+
+.hum-icon span:nth-child(3) {
+	top: 45px;
+}
+
+/* 最初のspanをマイナス45度に */
+.hum-icon.active span:nth-child(1) {
+	top: 35px;
+	right: calc(50% - 15px); /* hum-iconの真ん中の位置-span幅の半分 */
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.hum-icon.active span:nth-child(2),
+.hum-icon.active span:nth-child(3) {
+	top: 35px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+.main img {
+	width: 100%;
+}
+
+.contents-text {
+	width: 100%;
+}
